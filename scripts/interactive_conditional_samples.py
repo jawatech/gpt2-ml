@@ -176,6 +176,7 @@ with tf.Session(config=tf_config, graph=tf.Graph()) as sess:
             print("Sample,", i + 1, " of ", args.samples)
             line = tokenization.convert_to_unicode(text)
             bert_tokens = tokenizer.tokenize(line)
+            print(bert_tokens)
             encoded = tokenizer.convert_tokens_to_ids(bert_tokens)
             context_formatted = []
             context_formatted.extend(encoded)
